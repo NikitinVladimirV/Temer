@@ -39,7 +39,7 @@ async function createTimer(db, description, userId) {
 }
 
 async function updateTimer(db, where, data) {
-  // if (!db) return;
+  if (!db) return;
 
   const timers = await db.collection("timers").find(where).toArray();
 
